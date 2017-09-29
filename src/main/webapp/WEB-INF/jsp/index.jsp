@@ -22,5 +22,10 @@
         <footer>
             <jsp:include page="/WEB-INF/jsp/fragments/footer.jsp" />
         </footer>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="/resources/core/image/beer.jpg">
+            </div>
+        </div>
     </body>
 </html>
