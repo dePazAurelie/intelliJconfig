@@ -31,6 +31,8 @@ public class UserController {
         model.addAttribute("name", user.getName());
         model.addAttribute("password", user.getPassword());
         model.addAttribute("email", user.getEmail());
+        model.addAttribute("gender", user.getGender());
+        model.addAttribute("beer", user.getBeer());
 
         return "users/userInfo";
     }
