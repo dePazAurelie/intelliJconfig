@@ -3,9 +3,4 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <jdbc:embedded-database id="dataSource" type="HSQL">
-        <jdbc:script location="classpath:resources/db/sql/create_db.sql" />
-    </jdbc:embedded-database>
-
 </beans>

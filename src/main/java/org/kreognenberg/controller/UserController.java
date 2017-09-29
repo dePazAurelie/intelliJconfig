@@ -17,10 +17,14 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView user() {
-        return new ModelAndView("users/userForm", "command", new User());
+    public String user(ModelMap model) {
+        return "index";
     }
 
+    @RequestMapping(value="/userForm", method = RequestMethod.GET)
+    public ModelAndView navigateToRegistration() {
+        return new ModelAndView("users/userForm", "command", new User());
+    }
 
     @RequestMapping(value = "/userInfo", method = RequestMethod.POST)
     public String addUser(@ModelAttribute("SpringWeb")User user, ModelMap model) {

@@ -28,7 +28,7 @@ public class Main {
         return ourSessionFactory.openSession();
     }
 
-    public static void main(final String[] args) throws Exception {
+    public static void main(final String[] args) {
         final Session session = getSession();
         try {
             System.out.println("querying all the managed entities...");

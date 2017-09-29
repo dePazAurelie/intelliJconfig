@@ -1,4 +1,4 @@
-package org.kreognenberg;
+package org.kreognenberg.model;
 
 import javax.persistence.*;
 

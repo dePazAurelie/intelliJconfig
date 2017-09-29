@@ -26,30 +26,61 @@
                 <td class = "input-field col s9"><form:input path = "email" /></td>
             </tr>
             <tr>
+                <td>
+                    <p>
+                        Gender :
+                    </p>
+                    <form:radiobutton path="gender" value="female" label="Female" />
+                    <form:radiobutton path="gender" value="male" label="Male" />
+                    <form:radiobutton path="gender" value="other" label="Other" />
+                </td>
+                <td>Country :</td>
+                <td>
+                    <form:select path="beer">
+                        <form:option value="" label="Select" />
+                        <form:option value="kronenbourg" label="Kronenbourg" />
+                        <form:option value="heineken" label="Heineken" />
+                        <option value="carlsberg">Carlsberg</option>
+                        <form:option value="carlsberg" label="Carlsberg" />
+                        <option value="guinness">Guinness</option>
+                        <form:option value="" label="Select" />
+                        <option value="grimbergen">Grimbergen</option>
+                        <form:option value="" label="Select" />
+                        <option value="1664">1664</option>
+                        <form:option value="" label="Select" />
+                        <form:options items="${countryList}" itemValue="countryId" itemLabel="countryName" />
+                    </form:select>
+                </td>
+                <div class="input-field col s4">
+                    <select name="beer" id="beer">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="kronenbourg">Kronenbourg</option>
+                        <option value="heineken">Heineken</option>
+                        <option value="carlsberg">Carlsberg</option>
+                        <option value="guinness">Guinness</option>
+                        <option value="grimbergen">Grimbergen</option>
+                        <option value="1664">1664</option>
+                    </select>
+                    <label>Beers ?</label>
+                </div>
+            </tr>
+
+            <tr>
                 <td colspan = "2">
                     <input type = "submit" class = "btn" value = "Send"/>
                 </td>
             </tr>
-        </table>
-        <div class = "row">
-            <div class = "input-field col s4">Gender :<br>
-                <input type="radio" name="gender" value="female" id="female" /> <label for="female">Female</label><br>
-                <input type="radio" name="gender" value="male" id="male" /> <label for="male">Male</label><br>
-                <input type="radio" name="gender" value="other" id="other" /> <label for="other">Other</label><br>
-            </div>
 
-            <div class="input-field col s4">
-                <select name="beer" id="beer">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="kronenbourg">Kronenbourg</option>
-                    <option value="heineken">Heineken</option>
-                    <option value="carlsberg">Carlsberg</option>
-                    <option value="guinness">Guinness</option>
-                    <option value="grimbergen">Grimbergen</option>
-                    <option value="1664">1664</option>
-                </select>
-                <label>Beers ?</label>
-            </div>
+
+                    <td>Community :</td>
+                    <td><form:checkboxes path="communityList" items="${communityList}" itemValue="key" itemLabel="value" /></td
+            </table>
+        </form:form>
+
+        </body>
+        </html>
+
+
 
             <div class = "input-field col s4">You are interested in :<br>
                 <input type="checkbox" name="buy" id="buy" /> <label for="buy">Buying Beer ?</label><br>
