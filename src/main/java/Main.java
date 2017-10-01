@@ -35,7 +35,7 @@ public class Main {
             final Metamodel metamodel = session.getSessionFactory().getMetamodel();
             for (EntityType<?> entityType : metamodel.getEntities()) {
                 final String entityName = entityType.getName();
-                final Query query = session.createQuery("from " + entityName);
+                final Query query = session.createQuery("from UsersEntity");
                 System.out.println("executing: " + query.getQueryString());
                 for (Object o : query.list()) {
                     System.out.println("  " + o);

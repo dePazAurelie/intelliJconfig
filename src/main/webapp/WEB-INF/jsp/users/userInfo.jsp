@@ -47,7 +47,7 @@
 
     <footer class = "valign-wrapper">
         <div class="container">
-            <a href="<c:url value='/hi' />">Back Home</a>
+            <a href="<c:url value='/' />">Back Home</a>
         </div>
         <jsp:include page="/WEB-INF/jsp/fragments/footer.jsp" />
     </footer>
