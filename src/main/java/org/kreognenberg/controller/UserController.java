@@ -1,6 +1,6 @@
 package org.kreognenberg.controller;
 
-import org.kreognenberg.model.User;
+import org.kreognenberg.model.UsersEntity;
 import org.kreognenberg.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,25 +18,20 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value ="/", method = RequestMethod.GET)
-    public String index() {
-        return "index";
-    }
-
-    @RequestMapping(value = "/hi", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcome(ModelMap model) {
-        List<User> users = userService.getAll();
+        List<UsersEntity> users = userService.getAll();
         model.addAttribute("users", users);
         return "index";
     }
 
     @RequestMapping(value="/userForm", method = RequestMethod.GET)
     public ModelAndView navigateToRegistration() {
-        return new ModelAndView("users/userForm", "command", new User());
+        return new ModelAndView("users/userForm", "command", new UsersEntity());
     }
 
     @RequestMapping(value = "/userInfo", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("SpringWeb")User user, ModelMap model) {
+    public String addUser(@ModelAttribute("SpringWeb")UsersEntity user, ModelMap model) {
         try {
             userService.register(user);
         } catch (Exception e) {
