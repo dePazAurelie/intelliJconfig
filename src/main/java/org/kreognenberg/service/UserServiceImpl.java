@@ -45,6 +45,14 @@ public class UserServiceImpl implements UserService {
     private UsersEntity getByName(String name) {
         return userDao.findByName(name);
     }
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 }
 
 /*
