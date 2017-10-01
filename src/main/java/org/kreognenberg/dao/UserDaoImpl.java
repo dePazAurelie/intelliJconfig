@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao{
     public List<UsersEntity> findAll() {
         Session session = sessionFactory.getCurrentSession();
         List<UsersEntity> users = new ArrayList<>();
-        users = session.createQuery("FROM UsersEntity").list();
+        //users = session.createQuery("FROM UsersEntity").list();
         session.close();
         return users;
     }
