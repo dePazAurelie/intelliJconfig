@@ -44,7 +44,11 @@
             </tr>
         </table>
     </div>
-    <footer>
+
+    <footer class = "valign-wrapper">
+        <div class="container">
+            <a href="<c:url value='/hi' />">Back Home</a>
+        </div>
         <jsp:include page="/WEB-INF/jsp/fragments/footer.jsp" />
     </footer>
     <div class="parallax-container">

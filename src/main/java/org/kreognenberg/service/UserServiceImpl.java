@@ -1,6 +1,10 @@
 package org.kreognenberg.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.kreognenberg.model.User;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +29,18 @@ public class UserServiceImpl implements UserService {
         } else {
             throw new Exception("Id or password doesn't exit !");
         }
+    }
+
+    public List<User> getAll() {
+        return new ArrayList<User>(users.values());
+    }
+
+    public User getById(Integer id) {
+        for (Map.Entry<String, User> entry : users.entrySet()) {
+            if (entry.getValue().getId() == id) {
+                return entry.getValue();
+            }
+        }
+        return null;
     }
 }
