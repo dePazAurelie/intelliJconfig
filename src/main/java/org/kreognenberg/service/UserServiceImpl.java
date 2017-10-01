@@ -15,8 +15,9 @@ public class UserServiceImpl implements UserService {
     public UsersEntity register(UsersEntity newUser) throws Exception {
         List<UsersEntity> users = getAll();
         for (UsersEntity user : users) {
-            if (user.equals(newUser)) {
-                throw new Exception("User already exists !");
+            if (user.getEmail().equals(newUser.getEmail())) {
+                newUser.setEmail("");
+                return newUser;
             }
         }
         userDao.save(newUser);

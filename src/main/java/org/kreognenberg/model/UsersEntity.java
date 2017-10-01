@@ -34,7 +34,7 @@ public class UsersEntity {
     }
 
     @Basic
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     public String getEmail() {
         return email;
     }

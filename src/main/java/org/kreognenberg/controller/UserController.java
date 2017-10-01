@@ -27,8 +27,7 @@ public class UserController {
 
     @RequestMapping(value="/userForm", method = RequestMethod.GET)
     public ModelAndView navigateToRegistration() {
-        return new ModelAndView("users/userForm",
-                "command", new UsersEntity());
+        return new ModelAndView("users/userForm","command", new UsersEntity());
     }
 
     @RequestMapping(value = "/userInfo", method = RequestMethod.POST)
@@ -39,12 +38,15 @@ public class UserController {
             e.printStackTrace();
         }
 
-        model.addAttribute("name", user.getName());
-        model.addAttribute("password", user.getPassword());
-        model.addAttribute("email", user.getEmail());
-        model.addAttribute("gender", user.getGender());
-        model.addAttribute("beer", user.getBeer());
-
-        return "users/userInfo";
+        if(user.getEmail().equals("")) {
+            return "users/error";
+        } else {
+            model.addAttribute("name", user.getName());
+            model.addAttribute("password", user.getPassword());
+            model.addAttribute("email", user.getEmail());
+            model.addAttribute("gender", user.getGender());
+            model.addAttribute("beer", user.getBeer());
+            return "users/userInfo";
+        }
     }
 }

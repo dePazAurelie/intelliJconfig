@@ -26,7 +26,7 @@
                     <td class = "input-field col s9"><form:input path = "email" /></td>
                 </tr>
             </table>
-            <div class="margins">
+            <div>
                 <p>
                     Gender :<br>
                 </p>
@@ -34,21 +34,21 @@
                 <form:radiobutton class="radio" path="gender" value="male" label="Male" /><br>
                 <form:radiobutton class="radio" path="gender" value="other" label="Other" /><br>
             </div>
-            <div class="margins" >
+            <div>
                 <p>
                     Which Beer do you prefer ?<br>
                 </p>
                 <form:select path="beer">
                     <form:option value="" label="Select" />
-                    <form:option value="kronenbourg" label="Kronenbourg" />
-                    <form:option value="heineken" label="Heineken" />
-                    <form:option value="carlsberg" label="Carlsberg" />
-                    <form:option value="guinness" label="Guinness" />
-                    <form:option value="grimbergen" label="Grimbergen" />
+                    <form:option value="Kronenbourg" label="Kronenbourg" />
+                    <form:option value="Heineken" label="Heineken" />
+                    <form:option value="Carlsberg" label="Carlsberg" />
+                    <form:option value="Guinness" label="Guinness" />
+                    <form:option value="Grimbergen" label="Grimbergen" />
                     <form:option value="1664" label="1664" />
                 </form:select>
             </div>
-            <div class="margins">
+            <div>
                 <input type = "submit" class = "btn" value = "Send"/>
             </div>
         </form:form>

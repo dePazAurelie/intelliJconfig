@@ -58,8 +58,7 @@ public class UserDaoImpl implements UserDao{
 
     private Session startSession() {
         final SessionFactory sessionFactory = buildSessionFactory();
-        Session session = sessionFactory.openSession();
-        return session;
+        return sessionFactory.openSession();
     }
 
     private void closeSession(Session session) {
