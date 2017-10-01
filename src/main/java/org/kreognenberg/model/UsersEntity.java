@@ -1,4 +1,4 @@
-package org.kreognenberg;
+package org.kreognenberg.model;
 
 import javax.persistence.*;
 
@@ -9,6 +9,8 @@ public class UsersEntity {
     private int id;
     private String email;
     private String password;
+    private String gender;
+    private String beer;
 
     @Basic
     @Column(name = "name")
@@ -21,7 +23,8 @@ public class UsersEntity {
     }
 
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
     public int getId() {
         return id;
     }
@@ -31,7 +34,7 @@ public class UsersEntity {
     }
 
     @Basic
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     public String getEmail() {
         return email;
     }
@@ -50,6 +53,27 @@ public class UsersEntity {
         this.password = password;
     }
 
+    @Basic
+    @Column(name = "gender")
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    @Basic
+    @Column(name = "beer")
+    public String getBeer() {
+        return beer;
+    }
+
+    public void setBeer(String beer) {
+        this.beer = beer;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -61,6 +85,8 @@ public class UsersEntity {
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        if (gender != null ? !gender.equals(that.gender) : that.gender != null) return false;
+        if (beer != null ? !beer.equals(that.beer) : that.beer != null) return false;
 
         return true;
     }
@@ -71,6 +97,8 @@ public class UsersEntity {
         result = 31 * result + id;
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (gender != null ? gender.hashCode() : 0);
+        result = 31 * result + (beer != null ? beer.hashCode() : 0);
         return result;
     }
 }

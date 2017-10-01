@@ -1,29 +1,49 @@
 package org.kreognenberg.service;
 
-import java.util.HashMap;
-import org.kreognenberg.model.User;
+import java.util.List;
+import org.kreognenberg.dao.UserDao;
+import org.kreognenberg.model.UsersEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private HashMap<String, User> users = new HashMap<String, User>();
 
-    public User register(User newUser) throws Exception {
-        if (!users.containsKey(newUser.getName())) {
-            users.put(newUser.getName(), newUser);
-            return newUser;
+    @Autowired
+    private UserDao userDao;
 
-        } else {
-            throw new Exception("User already exists !");
+    public UsersEntity register(UsersEntity newUser) throws Exception {
+        List<UsersEntity> users = getAll();
+        for (UsersEntity user : users) {
+            if (user.getEmail().equals(newUser.getEmail())) {
+                newUser.setEmail("");
+                return newUser;
+            }
         }
+        userDao.save(newUser);
+        return newUser;
     }
 
 
-    public User logUser(String username, String password) throws Exception {
-        if (users.get(username).getPassword().equals(password)) {
-            return users.get(username);
+    public UsersEntity logUser(String username, String password) throws Exception {
+        UsersEntity user = getByUsername(username);
+        if(user.getPassword().equals(password)) {
+            return user;
         } else {
             throw new Exception("Id or password doesn't exit !");
         }
     }
+
+    public List<UsersEntity> getAll() {
+        return userDao.findAll();
+    }
+
+    public UsersEntity getById(Integer id) {
+        return userDao.findById(id);
+    }
+
+    private UsersEntity getByUsername(String username) {
+        return userDao.findByName(username);
+    }
+
 }
