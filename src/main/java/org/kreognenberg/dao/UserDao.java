@@ -1,13 +1,12 @@
 package org.kreognenberg.dao;
 
-import org.kreognenberg.model.UsersEntity;
+import org.kreognenberg.model.User;
 import java.util.List;
 
 public interface UserDao {
-    UsersEntity findById(Integer id);
-    List findAll();
-    void save(UsersEntity user);
-    void update(UsersEntity user);
+    User findById(Integer id);
+    List<User> findAll();
+    void save(User user);
+    void update(User user);
     void delete(Integer id);
-    UsersEntity findByName(String name);
 }

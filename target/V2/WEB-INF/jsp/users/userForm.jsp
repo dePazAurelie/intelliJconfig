@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Aurélie de Paz
+  Date: 20/09/2017
+  Time: 11:31
+  To change this template use File | Settings | File Templates.
+--%>
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <html>
@@ -67,3 +74,37 @@
 </body>
 
 </html>
+
+<!--
+<form method="POST" action="/userInfo">
+<p>
+Username : <input type="text" name="inputName"><br>
+E-mail : <input type="email" name="inputEmail"><br>
+Password : <input type="password" name="inputPassword"><br>
+</p>
+<p>
+Gender :<br>
+<input type="radio" name="gender" value="female" id="female" /> <label for="female">Female</label><br>
+<input type="radio" name="gender" value="male" id="male" /> <label for="male">Male</label><br>
+<input type="radio" name="gender" value="other" id="other" /> <label for="other">Other</label><br>
+</p>
+<p>
+<label for="beer">Beers ?</label><br>
+<select name="beer" id="beer">
+<option value="kronenbourg">Kronenbourg</option>
+<option value="heineken">Heineken</option>
+<option value="carlsberg">Carlsberg</option>
+<option value="guinness">Guinness</option>
+<option value="grimbergen">Grimbergen</option>
+<option value="1664">1664</option>
+</select>
+</p>
+<p>
+You are interested in :<br>
+<input type="checkbox" name="buy" id="buy" /> <label for="buy">Buying Beer ?</label><br>
+<input type="checkbox" name="brew" id="brew" /> <label for="brew">Brew Beer ?</label><br>
+<input type="checkbox" name="look" id="look" /> <label for="look">Look around ?</label><br>
+</p>
+<input type="submit" value="Send" />
+</form>
+-->

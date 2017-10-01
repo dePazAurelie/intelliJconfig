@@ -1,63 +1,29 @@
 package org.kreognenberg.dao;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.kreognenberg.model.UsersEntity;
+import org.kreognenberg.model.User;
 import org.springframework.stereotype.Repository;
 
-import java.util.*;
+import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao{
-    private SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
-    private UsersEntity user = new UsersEntity();
-
-    public UsersEntity findById(Integer id) {
-        Session session = sessionFactory.getCurrentSession();
-        user = session.get(UsersEntity.class, id);
-        session.close();
-        return user;
+    public User findById(Integer id) {
+        return null;
     }
 
-    public List<UsersEntity> findAll() {
-        Session session = sessionFactory.getCurrentSession();
-        List<UsersEntity> users = new ArrayList<>();
-        //users = session.createQuery("FROM UsersEntity").list();
-        session.close();
-        return users;
+    public List<User> findAll() {
+        return null;
     }
 
-    public void save(UsersEntity user) {
-        Session session = sessionFactory.getCurrentSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(user);
-        transaction.commit();
-        session.close();
+    public void save(User user) {
+
     }
 
-    public void update(UsersEntity user) {
-        Session session = sessionFactory.getCurrentSession();
-        Transaction transaction = session.beginTransaction();
-        session.update(user);
-        transaction.commit();
-        session.close();
+    public void update(User user) {
+
     }
 
     public void delete(Integer id) {
-        Session session = sessionFactory.getCurrentSession();
-        Transaction transaction = session.beginTransaction();
-        user = findById(id);
-        session.delete(user);
-        transaction.commit();
-        session.close();
-    }
 
-    @Override
-    public UsersEntity findByName(String name) {
-        Session session = sessionFactory.getCurrentSession();
-        user = session.get(UsersEntity.class, name);
-        session.close();
-        return user;
     }
 }
