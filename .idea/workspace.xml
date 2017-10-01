@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="323d0663-a20d-4566-aef1-a7dc6f6960c1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/kreognenberg/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/org/kreognenberg/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/kreognenberg/dao/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/kreognenberg/dao/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/kreognenberg/model/UsersEntity.java" afterPath="$PROJECT_DIR$/src/main/java/org/kreognenberg/model/UsersEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/kreognenberg/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/kreognenberg/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users/userForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users/userForm.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/V2/WEB-INF/jsp/users/userForm.jsp" afterPath="$PROJECT_DIR$/target/V2/WEB-INF/jsp/users/userForm.jsp" />
-    </list>
+    <list default="true" id="323d0663-a20d-4566-aef1-a7dc6f6960c1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,8 +112,8 @@
       <file leaf-file-name="error.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users/error.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="183">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -223,7 +214,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1011" />
     <option name="width" value="931" />
     <option name="height" value="1090" />
@@ -691,10 +682,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92846000" />
+    <option name="totallyTimeSpent" value="93118000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="-11" width="1848" height="1102" extended-state="6" />
+    <frame x="83" y="-11" width="1848" height="1102" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1113,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="183">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
